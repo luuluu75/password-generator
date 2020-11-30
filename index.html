@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Password-Generator</title>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+
+    var lengthMin = 8
+    var lengthMax = 128
+    var lowercase = true;"abcdefghijklmnopqrstuvwxyz";
+    var uppercase = true; "ABCDEFGHIJKLMNOPQRSTUVWXY";
+    var number = true; "0123456789";
+    var specialCharacters = true; "!@#?$"; 
+    var characters = " uppercase letters"; "lowercase letters"; "numbers"; "special characters"
+
+
+// Prompt user to select criteria
+userLength = prompt("Please enter the length you want your password to be");
+    if (userlength <=lengthMin && userLength >=lengthMax) {
+    alert("Password length must be between 8 and 128 characters.")
+
+varchar = prompt("Would you like to include" + characters[i])
+    for (var i = 0; i < characters.length; i++) 
+        console.log;
+
+passsword = (userLength + varchar)
+
+}
+
+// what length?, min 8 varchar and max 128 varchar
+//  alert if below min or =128 or over or invalid type
+// what character type? uppercase, lowercase, numeric and/or special characters
+//  alert if invalid
+
+
+ 
+userVarchar = prompt("Please enter")
+userLength = computerLength
+userVarchar = computerVarchar
+if (str.indexOf.lowercase)
+
+
+userLength {
+    (newanumber >= 1 && newanumber <= 128)}
+
+
+//Random Number selection
+for (var i = 0; i < 10; i++)
+ // Randomly chooses a choice from the options array. This is the Computer's guess.
+     var userNumber = computerLength[Math.floor(Math.random() * computerLength.length)];
+  </body>
+
+console.log(userlength)
+
+
+GIVEN I need a new, secure password
+WHEN I click the button to generate a password
+THEN I am presented with a series of prompts for password criteria
+WHEN prompted for password criteria
+THEN I select which criteria to include in the password
+WHEN prompted for the length of the password
+THEN I choose a length of at least 8 characters and no more than 128 characters
+WHEN prompted for character types to include in the password
+THEN I choose lowercase, uppercase, numeric, and/or special characters
+WHEN I answer each prompt
+THEN my input should be validated and at least one character type should be selected
+WHEN all prompts are answered
+THEN a password is generated that matches the selected criteria
+WHEN the password is generated
+THEN the password is either displayed in an alert or written to the page
