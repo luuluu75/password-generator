@@ -1,43 +1,54 @@
-//PasswordCriteria
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
-
-var lengthMin = 8;
-var lengthMax = 128;
+var lengthMin = "8";
+var lengthMax = "128";
 var lowercase = "abcdefghijklmnopqrstuvwxyz";
 var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXY";
 var number = "0123456789";
 var specialCharacters = "!@#?$"; 
-var selectedCharacters = ""
-var characters = (lowercase , uppercase, number, specialCharacters);
+var selectedCharacters = ("lowercase" , "uppercase" , "numbers","special characters");
+
+
+var userlength = prompt("Please select the length of your password, between 8 and 128");{
+if (userlength <lengthMin || userLength >lengthMax);
+prompt("Length selected is invalid. Please enter a number between 8 and 128");
+}
+
+var userSelected = prompt("Do you want to include" + selectedCharacters);
+for(var i = 0; i <selectedCharacters.length; i++);
+if (userSelected.toLocaleLowerCase = "Y" || "yes");{
+userSelected.specialCharacters[i] = true;
+userSelected.specialCharacters[i] = false;
+}
+
+
+ 
+function generatePassword() {
+    console.log ("it works");
+}
+
+
+ , "Do you want to include uppercase?" , "Do you want to include numbers","Do you want to include special characters"
+// Write password to the #password input
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
+
+//   passwordText.value = password;
+// }
+
+// // Add event listener to generate button
+// generateBtn.addEventListener("click", writePassword);
+
+
+
 
 //WHEN prompted for the length of the password
 //THEN I choose a length of at least 8 characters and no more than 128 characters
 // what length?, min 8 varchar and max 128 varchar
 // alert if below min or =128 or over or invalid type
-function generatePassword() {
-    console.log ("it works");
-var userLength=0 ;
-while (userlength >=lengthMin && userLength <=lengthMax){
-    userLength = prompt("Please a length between 8 and 128");
-    userLength=parseInt(userLength)
-}
-console.log(userLength)
-}
+
 
 
 //WHEN prompted for character types to include in the password
@@ -94,5 +105,3 @@ console.log(userLength)
 // // Randomly chooses a choice from the options array. This is the Computer's guess.
 //  var userNumber = computerLength[Math.floor(Math.random() * computerLength.length)];
 // </body>
-
-// console.log(userlength)
