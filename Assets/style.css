@@ -1,0 +1,20 @@
+.modal-header {
+background-color: lightblue;
+}
+
+.modal-body {
+    height: 150px;
+}
+
+
+#display{
+    width: 80%;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    position: center;
+}
+
+#container{
+    height: 50%;
+    width: 100%;
+}
