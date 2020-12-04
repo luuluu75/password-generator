@@ -1,4 +1,3 @@
-
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 var userLength = "";
@@ -12,54 +11,40 @@ var password = "";
 
 
 // alert if below min or =128 or over or invalid type
+var text = ("Enter a password length");
+var text1 = ("Length selected is invalid.");
 
-
-var text = ("Enter a password length")
-var text1 = ("Length selected is invalid. Please enter a number between 8 and 128");
-
-var userLength = prompt(text)  
-if (userLength <= lengthMin || userLength >= lengthMax){
-    alert(text1)
+var userLength = prompt("Enter a password length");
 console.log(userLength)
-}
-   
+if ((parseInt.userLength) <= lengthMin || (parseInt.userLength) >= lengthMax){
+    alert("Length selected is invalid.")
+};
 
 // Function to randomly select pasword varchar
-generatePassword()
+generatePassword() 
 
-function generatePassword(){
+function generatePassword() {
 //confirm the characters to include 
 var incLowercase = confirm("Do you want to include lowercases?");
-    if (incLowercase) true; {
-        getRandomLowerCase()
-    }
 var incUpcase = confirm("Do you want to include uppercase?");
-    if (incUpcase) true; {
-    getRandomUpperCase(toString);    
-    }
-
 var incNums = confirm("Do you want to include numbers?");
+var incSymbols = confirm("Do you want to include special characters?");
+   
+    if (incLowercase) true; {
+        getRandomLowerCase();
+    }
+    if (incUpcase) true; {
+        getRandomUpperCase();   
+    }
     if (incNums); true; {
         getRandomNumber();
     }
-var incSymbols = confirm("Do you want to include special characters?");
     if (incSymbols); true;{
         getRandomSymbol();
     }
-    console.log(getRandomLowerCase())
-    console.log(getRandomUpperCase())
-    console.log(getRandomNumber())
-    console.log(getRandomSymbol())
+};
     
-    for (var i = 0, i =< (toInt.userLength) ; i++)
-    // var password = console.log(getRandomUpperCase()) + console.log(getRandomUpperCase())  + console.log(getRandomNumber()) + console.log(getRandomSymbol())) 
-
-    function getRandomLowerCase() {
-        console.log("lowercase: ", lowercase);
-        console.log("lowercase with random length: ", lowercase[(Math.floor(Math.random() * lowercase.length))]);
-            return lowercase[(Math.floor(Math.random() * lowercase.length))];
-    }
-//generate random numbers
+// Functions to generate random character variables
 
 function getRandomLowerCase() {
     console.log("lowercase: ", lowercase);
@@ -70,7 +55,7 @@ function getRandomLowerCase() {
 function getRandomUpperCase(){
     console.log("uppercase: ", uppercase);
     console.log("uppercasecase with random length: ", uppercase[(Math.floor(Math.random() * uppercase.length))]);
-    return uppercase[(Math.floor(Math.random()*uppercase.length))];
+    return uppercase[(Math.floor(Math.random() * uppercase.length))];
     }
 
 function getRandomNumber(){
@@ -85,31 +70,15 @@ function getRandomSymbol(){
     return specialCharacters[(Math.floor(Math.random()*specialCharacters.length))];
     }
 
+ // Add event listener to generate button
+generateBtn.addEventListener("click", writePassword); 
 
-// }
+// Write password to the #password input
+writePassword()
 
-
-// // Write password to the #password input
-// function writePassword() {
-//     var password = generatePassword();
-//     var passwordText = document.querySelector("#password");
-//     passwordText.value = password;
-//   };
-
-// // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
-
-// //WHEN prompted for the length of the password
-// //THEN I choose a length of at least 8 characters and no more than 128 characters
-// // what length?, min 8 varchar and max 128 varchar
-
-
-
-
-// //WHEN prompted for character types to include in the password
-// //THEN I choose lowercase, uppercase, numeric, and/or special characters
-
-
-// //WHEN all prompts are answered
-// //THEN a password is generated that matches the selected criteria
-// }
+function writePassword() {
+    console.log("it works");
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+    passwordText.value = password;
+}
