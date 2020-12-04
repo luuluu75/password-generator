@@ -6,4 +6,5 @@ This is my attempt at creating a password app.
 - The system will generate random values from the list 
 
 git repo - https://github.com/luuluu75/password-generator.git
-published page = 
+published page - https://luuluu75.github.io/password-generator/
+
